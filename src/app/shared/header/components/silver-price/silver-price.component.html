@@ -1,0 +1,9 @@
+<div class="silver-price-box">
+  <div class="container" *ngFor="let silverPrice of (silverPrice$|async)">
+    <div *ngIf="silverPrice.key === 'هر گرم نقره 925'">
+      <span class="silver-day-price">قیمت روز نقره: </span>
+      <span class="silver-price">{{silverPrice.price |  number: '1.0-0'}}</span>
+      <span class="toman"> تومان</span>
+    </div>
+  </div>
+</div>

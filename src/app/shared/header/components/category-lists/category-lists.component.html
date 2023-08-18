@@ -1,0 +1,19 @@
+<div *ngIf="(categoryList$ | async) as categoryLists">
+  <div class="flex flex-row categories"
+    *ngFor="let category of categoryLists">
+    <div class="col-3 category-name">
+      <div class="flex align-items-center py-3 category-name-icon">
+        <img [ngSrc]="category.icon!" [alt]="category.name" width="35" height="45">
+        <span class="ms-2">{{category.name}}</span>
+      </div>
+    </div>
+    <div class="col-5">
+      <div *ngFor="let subCategory of category.subCategories">
+        <span>{{subCategory.name}}</span>
+      </div>
+    </div>
+    <div class="col-4">
+      <span>انگشتر</span>
+    </div>
+  </div>
+</div>

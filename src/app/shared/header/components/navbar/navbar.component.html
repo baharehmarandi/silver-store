@@ -1,0 +1,15 @@
+<div class="container position-relative">
+  <div class="d-flex flex-row navbar">
+    <a href="">صفحه اصلی</a>
+    <button href="" [ngClass]="categoryListShown ? 'flex align-items-center mx-4  category-active-btn': 'flex align-items-center mx-4 category-btn'" (click)="onShowCategoryList()">
+      <span>دسته بندی ها</span>
+      <img ngSrc="assets/images/ArrowDown.png" height="16" width="16" alt="down arrow" [ngClass]="categoryListShown? 'ms-1 down-arrow-active': 'ms-1 down-arrow'">
+    </button>
+    <a href="">درخواست تولید</a>
+    <a href="" class="mx-4">درباره ما</a>
+    <a href="">وبلاگ</a>
+  </div>
+  <div [ngClass]="{'show-category':categoryListShown}" class="container category">
+    <app-category-lists></app-category-lists>
+  </div>
+</div>

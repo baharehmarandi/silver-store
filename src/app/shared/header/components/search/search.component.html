@@ -1,0 +1,20 @@
+<div class="container flex flex-row mt-3">
+  <div class="flex col-6">
+    <p-image [src]="logoImage" alt="logo image" width="42"></p-image>
+    <div class="search p-input-icon-left ms-5">
+      <i class="pi pi-search search-icon"></i>
+      <input class="search-input " type="text" pInputText [(ngModel)]="value" placeholder="جستجو"/>
+    </div>
+  </div>
+  <div class="flex col-6 justify-content-end">
+    <button class="favorite-icon-btn">
+      <img ngSrc="assets/images/Iconly-Light-Heart.png" alt="favorite icon" height="24" width="24">
+    </button>
+    <button class="profile-icon-btn">
+      <img ngSrc="assets/images/Iconly-Light-Profile.png" alt="profile icon" height="24" width="24" class="mx-2">
+    </button>
+    <button class="shopping-card-icon-btn">
+      <img ngSrc="assets/images/Iconly-Light-Bag.png" alt="shopping card icon" height="24" width="24">
+    </button>
+  </div>
+</div>

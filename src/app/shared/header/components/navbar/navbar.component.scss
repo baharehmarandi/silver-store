@@ -1,0 +1,56 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.category-btn{
+  border: none;
+  background: unset;
+  font-family: "IRANYEKAN-Medium", serif;
+  color: $medium-gray;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navbar>a{
+  text-decoration: none !important;
+  color: $medium-gray;
+}
+
+.category{
+  background-color: white !important;
+  width: 100% !important;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 15px $shadow-dark;
+  transition: all 300ms ease-in-out;
+  overflow-y: scroll;
+}
+.category::-webkit-scrollbar{
+  display: none;
+}
+
+.show-category{
+  height: 550px;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.category-active-btn{
+  border: none;
+  background: unset;
+  font-family: "IRANYEKAN-Medium", serif;
+  color: $light-orange!important;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid $light-orange;
+}
+
+.down-arrow{
+  transition: 300ms ease-in-out;
+}
+
+.down-arrow-active{
+  rotate: 180deg !important;
+  color: $light-orange!important;
+  transition: 300ms ease-in-out;
+}

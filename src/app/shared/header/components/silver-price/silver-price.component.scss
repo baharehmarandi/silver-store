@@ -1,0 +1,20 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.silver-price-box{
+  background-color: $bg-light;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.silver-day-price{
+  color: $medium-gray;
+}
+
+.silver-price{
+  color: $dark-gray;
+}
+
+.toman{
+  font-size: 12px;
+  color: $dark-gray;
+}

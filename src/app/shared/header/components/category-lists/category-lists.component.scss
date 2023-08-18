@@ -1,0 +1,15 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.categories{
+  height: 100%;
+  cursor: pointer;
+}
+
+.category-name{
+  background-color: $bg-light;
+}
+
+.category-name-icon>span{
+  font-family: "IRANYEKAN-Medium", serif;
+  color: $medium-gray!important;
+}

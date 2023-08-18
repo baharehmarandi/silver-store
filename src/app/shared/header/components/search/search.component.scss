@@ -1,0 +1,27 @@
+@import "../../../../../assets/styles/fontStyles.scss";
+@import "../../../../../assets/styles/colors.scss";
+
+.search{
+  width: 50%
+}
+
+.search-input::placeholder{
+  font-family: "IRANYEKAN-Medium", serif!important;
+  font-size: $font-14!important;
+  color: $light-gray;
+}
+
+
+.search-input{
+  border: 1px solid $light-gray;
+  width: 100%
+}
+
+.search-icon{
+  color: $light-gray!important;
+}
+
+.favorite-icon-btn, .profile-icon-btn, .shopping-card-icon-btn{
+  border: none;
+  background-color: unset;
+}
