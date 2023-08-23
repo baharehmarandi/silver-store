@@ -1,19 +1,30 @@
-<div *ngIf="(categoryList$ | async) as categoryLists">
-  <div class="flex flex-row categories"
-    *ngFor="let category of categoryLists">
-    <div class="col-3 category-name">
-      <div class="flex align-items-center py-3 category-name-icon">
+<div class="flex flex-row categories">
+  <div class="col-3 d-flex flex-column category-name">
+    <ng-container *ngFor="let category of categoryList let i=index">
+      <div class="flex align-items-center py-3 category-name-icon"
+            (mouseenter)="onShowSubCategory(i)"
+            [ngClass]="isHover[i] ? 'hovered' : 'not-hover'"
+            [id]="'categoryById' + i">
         <img [ngSrc]="category.icon!" [alt]="category.name" width="35" height="45">
         <span class="ms-2">{{category.name}}</span>
       </div>
-    </div>
-    <div class="col-5">
-      <div *ngFor="let subCategory of category.subCategories">
+    </ng-container>
+  </div>
+  <div class="col-5 sub-category" *ngIf="showSubCategory">
+    <ng-container *ngFor="let subCategory of categoryList![subCategoryIndex!].subCategories let i=index">
+      <div class="mb-3 flex flex-row align-items-center">
+        <img *ngIf="subCategory.subCategories?.length" src="assets/images/Rectangle%201994.png" alt="sub category image">
+        <img *ngIf="!subCategory.subCategories?.length" class="no-sub-category" src="assets/images/Ellipse%202214.png" alt="sub category image">
         <span>{{subCategory.name}}</span>
       </div>
-    </div>
-    <div class="col-4">
-      <span>انگشتر</span>
-    </div>
+      <div *ngFor="let subSubCategory of subCategory.subCategories"
+           class="flex flex-row align-items-center mb-3">
+        <img class="no-sub-category" src="assets/images/Ellipse%202214.png" alt="sub category image">
+        <span>{{subSubCategory.name}}</span>
+      </div>
+    </ng-container>
+  </div>
+  <div class="col-4">
+    <img [src]="imageUrl" alt="image">
   </div>
 </div>

@@ -1,13 +1,12 @@
-import {ISubCategories} from "./subCategories.interface";
 import {ICategoryFeatures} from "./categoryFeatures.interface";
 import {ICategorySizes} from "./categorySizes.interface";
 
 export interface ICategory {
-  id?: number,
+  id: number,
   name?: string,
   image?: string,
   icon?: string,
-  subCategories?: ISubCategories[]
+  subCategories?: ICategory[]
   features?: ICategoryFeatures[],
   sizes?: ICategorySizes[]
 }

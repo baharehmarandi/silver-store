@@ -2,7 +2,7 @@ import {ICategoryFeatures} from "./categoryFeatures.interface";
 import {ICategorySizes} from "./categorySizes.interface";
 
 export interface ISubCategories {
-  id?: number,
+  id: number,
   name?: string,
   image?: string,
   icon?: string,

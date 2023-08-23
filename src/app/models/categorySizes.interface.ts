@@ -1,4 +1,4 @@
 export interface ICategorySizes {
-  id?: number,
+  id: number,
   name?: string
 }

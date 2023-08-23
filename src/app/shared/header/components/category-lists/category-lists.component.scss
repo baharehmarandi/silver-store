@@ -5,11 +5,33 @@
   cursor: pointer;
 }
 
-.category-name{
+.not-hover{
   background-color: $bg-light;
 }
 
 .category-name-icon>span{
   font-family: "IRANYEKAN-Medium", serif;
   color: $medium-gray!important;
+}
+
+.hovered{
+  background-color: white;
+}
+
+.top-category {
+  border-top-left-radius: 50px;
+}
+
+.bottom-category {
+  border-bottom-left-radius: 50px;
+}
+
+.sub-category{
+  padding-top: 50px;
+  margin-right: 20px;
+}
+
+.no-sub-category{
+  margin-left: 22px;
+  margin-right: 20px
 }
