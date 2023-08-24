@@ -1,4 +1,4 @@
-import {Component, OnInit, Renderer2} from '@angular/core';
+import {AfterViewInit, Component, Input, Renderer2} from '@angular/core';
 import {ICategory} from "../../../../models/category.interface";
 import {Store} from "@ngrx/store";
 import {CategoryAction} from "../../../../store/category/actions/category.action";
@@ -10,7 +10,9 @@ import {selectCategory} from "../../../../store/category/selectores/category.sel
   styleUrls: ['./category-lists.component.scss']
 })
 
-export class CategoryListsComponent implements OnInit {
+export class CategoryListsComponent implements AfterViewInit {
+
+  @Input() showCategories: boolean = false;
 
   categoryList: ICategory[] | undefined;
   subCategoryIndex?: number;
@@ -26,10 +28,8 @@ export class CategoryListsComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.onShowSubCategory(0);
-    // this.imageUrl = this.categoryList![0].image;
-    // this.renderer.addClass(document.getElementById("categoryById"+(1))!, "top-category");
   }
 
   onShowSubCategory(index: number){
@@ -45,8 +45,14 @@ export class CategoryListsComponent implements OnInit {
     this.isHover[index] = true;
 
     if(index === 0){
-      this.renderer.addClass(document.getElementById("categoryById"+(index+1))!, "top-category");
-    } else {
+      if(document.getElementById("categoryById"+(index+1))){
+        this.renderer.addClass(document.getElementById("categoryById"+(index+1))!, "top-category");
+      }
+    }
+    else if(index === (this.categoryList?.length!-1)){
+      this.renderer.addClass(document.getElementById("categoryById"+(index-1))!, "bottom-category");
+    }
+    else {
       this.renderer.addClass(document.getElementById("categoryById"+(index+1))!, "top-category");
       this.renderer.addClass(document.getElementById("categoryById"+(index-1))!, "bottom-category");
     }

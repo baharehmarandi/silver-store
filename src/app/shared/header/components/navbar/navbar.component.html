@@ -10,6 +10,6 @@
     <a href="">وبلاگ</a>
   </div>
   <div [ngClass]="{'show-category':categoryListShown}" class="container category">
-    <app-category-lists></app-category-lists>
+    <app-category-lists [showCategories] = categoryListShown></app-category-lists>
   </div>
 </div>

@@ -18,6 +18,10 @@
   background-color: white;
 }
 
+.hovered>span{
+  color: $light-orange!important;
+}
+
 .top-category {
   border-top-left-radius: 50px;
 }

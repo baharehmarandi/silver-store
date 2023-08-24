@@ -1,4 +1,4 @@
-<div class="flex flex-row categories">
+<div class="flex flex-row categories" *ngIf="showCategories">
   <div class="col-3 d-flex flex-column category-name">
     <ng-container *ngFor="let category of categoryList let i=index">
       <div class="flex align-items-center py-3 category-name-icon"
@@ -24,7 +24,7 @@
       </div>
     </ng-container>
   </div>
-  <div class="col-4">
+  <div class="col-4" *ngIf="showSubCategory">
     <img [src]="imageUrl" alt="image">
   </div>
 </div>
