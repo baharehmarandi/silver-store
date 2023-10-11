@@ -1,0 +1,18 @@
+<div class="timer flex flex-row">
+  <div class="seconds-box flex flex-column">
+    <span id="seconds" class="seconds"> {{secondsToDday | number:'2.0-0'}} </span>
+    <span class="second-text">ثانیه</span>
+  </div>
+  <div class="minutes-box flex flex-column align-items-center">
+    <span id="minutes" class="minutes"> {{minutesToDday | number:'2.0-0'}} </span>
+    <span class="minutes-text">دقیقه</span>
+  </div>
+  <div class="hours-box flex flex-column align-items-centerr">
+    <span id="hours" class="hours"> {{hoursToDday | number : '2.0-0'}} </span>
+    <span class="hours-text">ساعت</span>
+  </div>
+  <div class="days-box flex flex-column align-items-center">
+    <span id="days" class="days"> {{daysToDday | number : '2.0-0'}} </span>
+    <span class="days-text">روز</span>
+  </div>
+</div>

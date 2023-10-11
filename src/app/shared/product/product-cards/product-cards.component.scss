@@ -1,0 +1,41 @@
+@import "../../../../assets/styles/colors";
+
+::ng-deep .swiper-button-prev {
+  width: 7px!important;
+  fill: black!important;
+}
+
+::ng-deep .swiper-button-next {
+  width: 7px!important;
+  fill: black!important;
+}
+
+.product-card-box{
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.product-card-box:hover{
+  box-shadow: 0 5px 12px rgba(0,0,0, 0.12)
+}
+
+.swiper-slide-product-image{
+  height: 247px !important;
+}
+
+.swiper-slide-product-image>img{
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 10px !important;
+}
+
+.show-quick-mode{
+  width: 32px !important;
+  height: 32px !important;
+  background-color: $light-gray-200;
+  top: 33px;
+  right: 31px;
+  z-index: 10;
+  border-radius: 4px !important;
+}

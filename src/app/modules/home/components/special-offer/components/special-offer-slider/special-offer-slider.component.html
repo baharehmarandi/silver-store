@@ -1,0 +1,7 @@
+<swiper-container  class="special-offer-slider-container" dir="ltr" swiper [config]="config">
+  <swiper-slide class="special-offer-slider d-flex align-items-center justify-content-center"
+                (click)="onSpecialOfferProductId(specialOffer.id)"
+                *ngFor="let specialOffer of specialOffers?.products">
+      <img [src]="specialOffer.images[0]" [alt]="specialOffer.title" width="72" height="72">
+  </swiper-slide>
+</swiper-container>

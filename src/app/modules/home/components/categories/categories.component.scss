@@ -1,0 +1,19 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.categories-title{
+  margin-top: 44px;
+}
+.home-category-swiper{
+  height: 190px;
+  margin-top: 31px;
+}
+
+.home-category-slide{
+  background-color: $bg-light;
+  border: 1px solid $bg-light-10;
+  border-radius: 24px;
+}
+
+.home-category-slide>img{
+  width: 50%;
+}

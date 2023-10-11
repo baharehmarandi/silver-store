@@ -1,0 +1,20 @@
+<div class="container special-offer">
+  <span class="special-offer-title text-3xl">فروش ویژه</span>
+  <div class="special-offer-box flex flex-row">
+    <div class="col-4 flex flex-column relative">
+        <ng-container>
+          <app-special-offer-images [selectedProduct]="specialOffer?.products![selectedProductId]"></app-special-offer-images>
+        </ng-container>
+        <div class="count-down">
+          <app-countdown [endTime]=specialOffer?.to></app-countdown>
+        </div>
+    </div>
+    <div class="col-6">
+      <app-special-offer-details [selectedProduct]="specialOffer?.products![selectedProductId]"></app-special-offer-details>
+    </div>
+    <div class="col-2 overflow-hidden">
+      <app-special-offer-slider [specialOffers]="specialOffer"
+                                (onSpecialOfferProductIdSet) = "selectedProductId = $event"></app-special-offer-slider>
+    </div>
+  </div>
+</div>

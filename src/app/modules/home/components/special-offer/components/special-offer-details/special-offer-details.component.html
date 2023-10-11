@@ -1,0 +1,51 @@
+<div class="special-offer-details relative">
+  <h2 class="special-offer-details-title">{{selectedProduct?.title}}</h2>
+  <div class="special-offer-category">
+    <span class="me-2">دسته بندی :</span>
+    <a routerLink="">{{selectedProduct?.category?.parentCategory?.parentCategory?.name}}</a>
+    <span class="mx-2">/</span>
+    <a routerLink="">{{selectedProduct?.category?.parentCategory?.name}}</a>
+    <span class="mx-2">/</span>
+    <a routerLink="">{{selectedProduct?.category?.name}}</a>
+  </div>
+  <div class="product-features">
+    <div class="product-features-title">
+      <span>برخی ویژگی های محصول</span>
+    </div>
+    <div class="special-offer-details-feature" *ngFor="let specialOfferDetailsFeature of selectedProduct?.features">
+      <img src="assets/images/Ellipse%202214.png" alt="bullet">
+      <span class="special-offer-details-feature-name">{{specialOfferDetailsFeature.name}}</span>
+      <span class="mx-2">:</span>
+      <span>{{specialOfferDetailsFeature.value}}</span>
+    </div>
+  </div>
+  <div class="stone-colors flex flex-row align-items-center">
+    <div>
+      <img src="assets/images/Ellipse%202214.png" alt="bullet">
+    </div>
+      <span class="color">رنگ</span>
+      <span class="mx-2">:</span>
+      <ng-container class="flex flex-row" *ngFor="let stoneColor of selectedProduct?.stoneColors">
+        <div class="product-stone-color" [ngStyle]="stoneColor? {'background-color':stoneColor.code}: null"></div>
+      </ng-container>
+  </div>
+  <div class="product-fee">
+    <ng-container *ngIf="selectedProduct?.discount === 0">
+      <span class="product-fee-without-discount me-1">{{selectedProduct?.fee | number}}</span>
+      <span class="me-1">تومان</span>
+    </ng-container>
+    <div class="flex flex-row" *ngIf="selectedProduct?.discount !== 0">
+      <div class="fee-before-discount">
+        <span class="product-fee-before-discount me-1">{{selectedProduct?.fee | number}}</span>
+        <span class="me-1">تومان</span>
+      </div>
+      <div class="fee-after-discount">
+        <span class="product-fee-after-discount me-1">{{discountFee | number}}</span>
+        <span class="me-1">تومان</span>
+      </div>
+    </div>
+  </div>
+  <div class="see-details-btn">
+    <button>مشاهده جزئیات</button>
+  </div>
+</div>

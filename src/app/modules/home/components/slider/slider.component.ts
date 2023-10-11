@@ -10,12 +10,9 @@ export class SliderComponent implements OnInit {
 
   @Input() sliders?: ISliderMainPage[];
   responsiveOptions: any[] | undefined;
-  constructor() {
-  }
 
   ngOnInit() {
 
-    console.log(this.sliders)
     this.responsiveOptions = [
       {
         breakpoint: '1199px',

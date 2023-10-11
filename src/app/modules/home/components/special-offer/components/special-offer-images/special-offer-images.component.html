@@ -1,0 +1,12 @@
+<div class="image-box flex align-items-center justify-content-center">
+  <swiper-container class="product-image-container" swiper [config]="config">
+    <swiper-slide *ngFor="let selectedProductImage of selectedProduct?.images">
+      <img [src]="selectedProductImage" [alt]="selectedProduct?.title" class="product-image">
+    </swiper-slide>
+  </swiper-container>
+</div>
+<div class="discount-box">
+  <div class="discount-text flex justify-content-center align-items-center">
+    <span class="text-white">20%</span>
+  </div>
+</div>

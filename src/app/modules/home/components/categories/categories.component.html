@@ -1,0 +1,12 @@
+<div class="container">
+  <span class="text-3xl categories-title">دسته بندی ها</span>
+  <swiper-container swiper [config]="config"
+                    class="home-category-swiper">
+    <ng-container *ngFor="let category of categories">
+      <swiper-slide class="home-category-slide flex flex-column align-items-center justify-content-center">
+        <img [src]="category.icon" [alt]="category.name">
+        <span>{{category.name}}</span>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+</div>

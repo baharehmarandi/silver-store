@@ -1,3 +1,11 @@
-<div *ngFor="let slider of sliders">
-  <span>{{slider.image}}</span>
+<div class="container card" dir="ltr">
+  <p-carousel [value]="sliders ?? []" [numVisible]="1" [numScroll]="1" [circular]="false" [showNavigators]="false">
+    <ng-template let-slider pTemplate="item">
+      <div class="text-center pt-5">
+        <div class="mb-3 slider-image">
+          <img [src]="slider.image" [alt]="slider.category.name" />
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
 </div>

@@ -1,1 +1,15 @@
+@import "../../assets/styles/colors.scss";
 
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
+  width: 67px!important;
+  border-radius: 4px !important;
+  background-color: $light-orange!important;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  background-color: $bg-light-10;
+  width: 15px !important;
+  height: 0.5rem;
+  transition: width 1s !important;
+  border-radius: 4px !important;
+}

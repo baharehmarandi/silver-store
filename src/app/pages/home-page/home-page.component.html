@@ -1,2 +1,15 @@
-<app-header></app-header>
-<app-slider [sliders]="slider"></app-slider>
+<ng-container *ngIf="(mainPage$|async) as mainPage">
+  <app-slider [sliders]="mainPage.sliders"></app-slider>
+  <app-categories [categories]="mainPage.categories"></app-categories>
+  <app-special-offer></app-special-offer>
+  <div class="container d-flex flex-row">
+    <div class="col-6">
+      <app-banners [banners]="mainPage.banners![0]"></app-banners>
+    </div>
+    <div class="col-6">
+      <app-banners [banners]="mainPage.banners![1]"></app-banners>
+    </div>
+  </div>
+  <app-product-slider title="جدیدترین ها" [products]="mainPage.newProducts"></app-product-slider>
+</ng-container>
+

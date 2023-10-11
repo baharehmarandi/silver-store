@@ -8,4 +8,4 @@ export const selectMainPageLoading = createSelector(selectMainPageFeature, (stat
 
 export const selectMainPageSuccess = createSelector(selectMainPageFeature, (state: MainPageState) => state.success);
 
-export const selectMainPageError = createSelector(selectMainPageFeature, (state: MainPageState) => state.error)
+export const selectMainPageError = createSelector(selectMainPageFeature, (state: MainPageState) => state.error);

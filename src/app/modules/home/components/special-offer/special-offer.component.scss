@@ -1,0 +1,22 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.special-offer-box{
+  height: 526px;
+  border-radius: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  padding-bottom: 55px;
+}
+
+.special-offer{
+  margin-top: 50px;
+}
+
+.item{
+  margin-left: 5px;
+}
+
+.count-down{
+  position: absolute;
+  bottom: 23px;
+  right: 87px;
+}

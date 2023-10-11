@@ -1,0 +1,19 @@
+@import "../../../../../././../../assets/styles/colors.scss";
+
+.special-offer-slider-container{
+  margin-top: 45px !important;
+  margin-left: 22px !important;
+  margin-bottom: 45px !important;
+}
+
+.special-offer-slider{
+  height: 80px !important;
+  width: 80px !important;
+  background-color: $light-gray-30;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+}
+
+.activeElement{
+  border: 1px solid $light-orange;
+}

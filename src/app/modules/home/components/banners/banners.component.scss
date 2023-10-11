@@ -1,0 +1,18 @@
+.banner{
+  height: 240px !important;
+  margin-top: 66px !important;
+}
+
+.banner>img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill;
+}
+
+.banner-radius-right{
+  border-top-right-radius: 40px !important;
+}
+
+.banner-radius-left{
+  border-bottom-left-radius: 40px !important;
+}

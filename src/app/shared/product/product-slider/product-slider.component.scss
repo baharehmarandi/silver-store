@@ -1,0 +1,32 @@
+@import "../../../../assets/styles/colors";
+
+.product-slider-box{
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 25px;
+  margin-top: 47px;
+}
+
+.product-swiper-container{
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+}
+
+.product-swiper-container>swiper-container{
+  height: 381px;
+}
+
+.product-slider-header{
+  border-bottom: 1px solid $bg-light-10;
+  padding: 20px 16px !important;
+}
+
+.product-title{
+  font-size: 18px !important;
+}
+
+.see-more{
+  color: $light-gray;
+  text-decoration: none;
+}

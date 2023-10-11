@@ -1,0 +1,100 @@
+@import "../../../../../../../assets/styles/colors.scss";
+
+
+.special-offer-details{
+  margin-top: 41px;
+}
+.special-offer-details-title{
+  color: $light-gray-400;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.special-offer-category{
+  color: $medium-gray;
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 25px;
+}
+
+.special-offer-category>a, .special-offer-category>span{
+  text-decoration: unset;
+  color: $medium-gray;
+  font-size: 16px;
+}
+
+.product-features-title{
+  margin-bottom: 21px;
+}
+
+.product-features-title>span{
+  font-size: 14px;
+  color: $light-gray-400;
+  margin-right: 22px;
+}
+
+.product-features-title::before{
+  content: "";
+  position: absolute;
+  background-color: $light-orange;
+  width: 13px !important;
+  height: 13px !important;
+  top: 7.9em;
+  left: 44.9em;
+  transform: rotate(45deg);
+  -webkit-filter: blur(2px);
+}
+
+.special-offer-details-feature-name{
+  margin-right: 5px !important;
+}
+
+.special-offer-details-feature{
+  color: $light-gray-400;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-stone-color{
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%  !important;
+  margin-left: 13px !important;
+}
+
+.color{
+  margin-right: 5px !important;
+}
+
+.product-fee-without-discount{
+  font-size: 20px;
+  color: $light-gray-400;
+}
+
+.fee-before-discount{
+  color: $light-gray;
+  font-size: 16px;
+  text-decoration-line: line-through;
+}
+
+.fee-after-discount{
+  font-size: 20px;
+  color: $light-gray-400;
+  margin-right: 12px !important;
+}
+
+.see-details-btn>button{
+  background-color: unset;
+  width: 202px;
+  height: 40px;
+  border: 1px solid $light-orange!important;
+  border-radius: 5px;
+  color: $light-orange;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product-fee{
+  margin-top: 41px;
+  margin-bottom: 23px;
+}

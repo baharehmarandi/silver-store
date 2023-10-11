@@ -1,4 +1,4 @@
-import {isDevMode, NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, isDevMode, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -15,6 +15,14 @@ import {CategoryReducer} from "./store/category/reducers/category.reducer";
 import {CategoryEffect} from "./store/category/effects/category.effect";
 import {MainPageReducer} from "./store/main-page/reducers/main-page.reducer";
 import {MainPageEffect} from "./store/main-page/effects/main-page.effect";
+import {SharedModule} from "./shared/shared.module";
+import {SwiperDirective} from "./shared/swiper/swiper.directive";
+import {register} from 'swiper/element/bundle';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {quickShowReducer} from "./store/quick-show/reducers/quik-show.reducer";
+import {QuickShowEffects} from "./store/quick-show/effects/quick-show.effect";
+
+register();
 
 @NgModule({
   declarations: [
@@ -26,9 +34,15 @@ import {MainPageEffect} from "./store/main-page/effects/main-page.effect";
     CommonModule,
     HttpClientModule,
     PrimengModule,
-    StoreModule.forRoot({silverPrice: SilverPriceReducer, Category: CategoryReducer, MainPage: MainPageReducer}),
-    EffectsModule.forRoot([SilverPriceEffect, CategoryEffect, MainPageEffect]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreModule.forRoot({silverPrice: SilverPriceReducer, Category: CategoryReducer, MainPage: MainPageReducer, quickShow: quickShowReducer}),
+    EffectsModule.forRoot([SilverPriceEffect, CategoryEffect, MainPageEffect, QuickShowEffects]),
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: !isDevMode()}),
+    SharedModule,
+    SwiperDirective,
+    BrowserAnimationsModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

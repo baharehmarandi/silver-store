@@ -1,0 +1,39 @@
+@import "../../../../../../../assets/styles/colors.scss";
+
+.image-box{
+  position: absolute;
+  width: 251px;
+  height: 251px;
+  top: 50px;
+  right: 80px;
+  border: 1px solid $bg-light-10;
+  border-radius: 30px;
+  rotate: 45deg;
+}
+
+.discount-box{
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  top: 45px;
+  right: 252px;
+  background-color: $light-orange;
+  rotate: 45deg;
+  border-radius: 12px;
+}
+
+.discount-text{
+  height: 100%;
+  rotate: -45deg;
+}
+
+.product-image-container{
+  width: 100% !important;
+  height: 100% !important;
+  rotate: -45deg;
+}
+
+.product-image{
+  width: 100% !important;
+  height: 100% !important;
+}

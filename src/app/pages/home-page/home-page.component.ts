@@ -1,10 +1,9 @@
 import {Component} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {MainPageAction} from "../../store/main-page/actions/main-page.action";
-import {Observable, tap} from "rxjs";
-import {IMainPage} from "../../models/main-page/mainPage.interface";
+import {Observable} from "rxjs";
 import {selectMainPage} from "../../store/main-page/selectors/main-page.selector";
-import {ISliderMainPage} from "../../models/main-page/slider-mainPage.interface";
+import {IMainPage} from "../../models/main-page/mainPage.interface";
 
 @Component({
   selector: 'app-home-page',
@@ -13,15 +12,11 @@ import {ISliderMainPage} from "../../models/main-page/slider-mainPage.interface"
 })
 export class HomePageComponent {
 
-  MainPage$: Observable<IMainPage | undefined>;
-  slider?: ISliderMainPage[]
+  mainPage$: Observable<IMainPage | undefined>
+
   constructor(private store: Store) {
     this.store.dispatch(MainPageAction.loadMainPage());
-    this.MainPage$ = this.store.select(selectMainPage).pipe(
-      tap((item) =>
-        this.slider = item?.sliders
-      )
-    );
+    this.mainPage$ = this.store.select(selectMainPage)
   }
 
 }
