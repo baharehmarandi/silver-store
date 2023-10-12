@@ -10,7 +10,9 @@
     <div class="col-4">
       <app-quick-show-product-details [productQuickShowDetails] = quickShow></app-quick-show-product-details>
     </div>
-    <div class="col-2"></div>
+    <div class="col-2">
+      <app-add-to-card [productFee] = quickShow></app-add-to-card>
+    </div>
   </div>
 </ng-container>
 <app-loading *ngIf="quickShowLoading$ | async as quickShowLoading"></app-loading>

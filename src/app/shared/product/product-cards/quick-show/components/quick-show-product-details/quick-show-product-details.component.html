@@ -24,16 +24,29 @@
     <span class="select-color-title">انتخاب رنگ : </span>
     <div class="d-flex flex-row color-lists">
       <div *ngFor="let color of productQuickShowDetails?.colors"
-            class="d-flex flex-column me-3 colors"
-           [id]="color.id"
-            (click)="onSelectColor(color.id)">
+            class="d-flex flex-column me-3 colors">
           <div [ngStyle]="{'background-color': color.code}"
-                class="product-color"></div>
+                class="product-color"
+               [id]="color.id"
+               (click)="onSelectColor(color.id)"></div>
         <span class="color-name">{{color.name}}</span>
       </div>
     </div>
   </div>
   <div class="select-size">
-    <p-dropdown [options]="productQuickShowDetails?.sizes" [(ngModel)]="selectedSize" placeholder="انتخاب سایز" [editable]="true" optionLabel="name"></p-dropdown>
+    <p-dropdown [options]="productQuickShowDetails?.sizes" [(ngModel)]="selectedSize" placeholder="انتخاب سایز" [editable]="true" optionLabel="name" appendTo="body"></p-dropdown>
+  </div>
+  <div class="d-flex flex-row product-count justify-content-between align-items-center">
+    <button class="add-btn"
+            (click)="onAddProduct()">
+      <span>+</span>
+    </button>
+    <div class="product-counter">
+      <span >{{productCounter}}</span>
+    </div>
+    <button class="minus-btn"
+            (click)="onMinusProduct()">
+      <span>-</span>
+    </button>
   </div>
 </div>

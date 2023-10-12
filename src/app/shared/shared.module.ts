@@ -20,6 +20,7 @@ import {
 } from './product/product-cards/quick-show/components/quick-show-slider/quick-show-slider.component';
 import { QuickShowProductDetailsComponent } from './product/product-cards/quick-show/components/quick-show-product-details/quick-show-product-details.component';
 import { QuickShowProductImageComponent } from './product/product-cards/quick-show/components/quick-show-product-image/quick-show-product-image.component';
+import { AddToCardComponent } from './product/product-cards/quick-show/components/add-to-card/add-to-card.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { QuickShowProductImageComponent } from './product/product-cards/quick-sh
     LoadingComponent,
     QuickShowSliderComponent,
     QuickShowProductDetailsComponent,
-    QuickShowProductImageComponent
+    QuickShowProductImageComponent,
+    AddToCardComponent
   ],
   imports: [
     CommonModule,

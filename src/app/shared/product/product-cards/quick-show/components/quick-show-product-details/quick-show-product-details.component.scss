@@ -84,5 +84,35 @@
 }
 
 .selected{
-  border: 1px solid black;
+  border: 3px solid #7D99D9;
+}
+
+.product-count{
+  width: 168px;
+  height: 44px;
+  border: 1px solid #E4E4E4;
+  padding: 4px;
+  border-radius: 6px;
+  margin-top: 18px;
+}
+
+.minus-btn,
+.add-btn{
+  background-color: #FFF0BC;
+  width: 37px;
+  height: 38px;
+  border: unset;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.minus-btn>span,
+.add-btn>span{
+  color: #D9AA7D;
+}
+
+.product-counter>span{
+  font-family: "IRANYEKAN-Bold", serif;
+  font-size: 14px;
+  color: #373737;
 }

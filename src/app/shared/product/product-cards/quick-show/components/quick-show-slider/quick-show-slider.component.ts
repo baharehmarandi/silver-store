@@ -10,7 +10,18 @@ import {SwiperOptions} from "swiper/types";
 export class QuickShowSliderComponent {
 
   @ViewChild("selectArtSlider") slide?: ElementRef;
-  @Input() productSlideImage?: IProducts;
+  @Input() set productSlideImage(value: IProducts){
+    if (value) {
+      this.productImageLink.emit(value.images[0]);
+      this._productSlideImage = value;
+    }
+  };
+  private _productSlideImage?: IProducts;
+
+  get productSlideImage (): IProducts | undefined {
+    return this._productSlideImage;
+  }
+
   @Output() productImageLink = new EventEmitter<string>();
 
   slideNextIsEnd: boolean = false;
