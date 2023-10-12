@@ -15,6 +15,11 @@ import {QuickShowComponent} from './product/product-cards/quick-show/quick-show.
 import {DialogModule} from "primeng/dialog";
 import {DialogService, DynamicDialogConfig} from "primeng/dynamicdialog";
 import {LoadingComponent} from './loading/loading.component';
+import {
+  QuickShowSliderComponent
+} from './product/product-cards/quick-show/components/quick-show-slider/quick-show-slider.component';
+import { QuickShowProductDetailsComponent } from './product/product-cards/quick-show/components/quick-show-product-details/quick-show-product-details.component';
+import { QuickShowProductImageComponent } from './product/product-cards/quick-show/components/quick-show-product-image/quick-show-product-image.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,10 @@ import {LoadingComponent} from './loading/loading.component';
     ProductSliderComponent,
     ProductCardsComponent,
     QuickShowComponent,
-    LoadingComponent
+    LoadingComponent,
+    QuickShowSliderComponent,
+    QuickShowProductDetailsComponent,
+    QuickShowProductImageComponent
   ],
   imports: [
     CommonModule,

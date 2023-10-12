@@ -5,13 +5,15 @@ import {InputTextModule} from 'primeng/inputtext';
 import {CarouselModule} from 'primeng/carousel';
 import {DynamicDialogModule} from 'primeng/dynamicdialog'
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {DropdownModule} from 'primeng/dropdown';
 
 const importedModules = [
   ImageModule,
   InputTextModule,
   CarouselModule,
   DynamicDialogModule,
-  ProgressSpinnerModule
+  ProgressSpinnerModule,
+  DropdownModule
 ]
 
 @NgModule({

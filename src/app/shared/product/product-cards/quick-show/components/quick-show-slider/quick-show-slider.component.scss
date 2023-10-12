@@ -1,0 +1,45 @@
+.quick-show-swiper{
+  height: 400px!important;
+  --swiper-navigation-size: 21px!important;
+  --swiper-navigation-color: #DBDBDB;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.quick-show-swiper>swiper-slide{
+  cursor: pointer;
+}
+
+.quick-show-swiper>swiper-slide>img{
+  border-radius: 12px;
+}
+
+.next-button {
+  position: absolute;
+  bottom: -4%;
+  right: 37%;
+  rotate: 90deg;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.prev-button{
+  position: absolute;
+  top: -7%;
+  right: 37%;
+  rotate: -90deg;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.buttonIsDisable >svg{
+  color: #DBDBDB
+}
+
+.buttonIsEnable >svg{
+  color: #3D3D3D
+}

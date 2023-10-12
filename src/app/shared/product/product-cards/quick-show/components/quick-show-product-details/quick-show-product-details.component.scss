@@ -1,0 +1,88 @@
+@import "../../../../../../../assets/styles/colors.scss";
+
+
+.product-quick-show-details{
+  margin-right: 20px !important;
+}
+
+.product-quick-show-title{
+  font-family: 'IRANYEKAN-Bold', serif;
+  font-size: 20px;
+  color: $light-gray-400;
+}
+
+.category>span{
+  font-family: 'IRANYEKAN-Medium', serif;
+  font-size: 14px;
+  color: $medium-gray;
+}
+
+.product-features{
+  margin-right: 15px;
+  margin-top: 18px !important;
+}
+
+.product-features:before{
+  content: "";
+  position: absolute;
+  background-color: #D9AA7D;
+  width: 13px !important;
+  height: 13px !important;
+  top: 177.8px;
+  right: 521px;
+  transform: rotate(45deg);
+  -webkit-filter: blur(2px);
+}
+
+.product-features-title{
+  font-family: "IRANYEKAN-Medium", serif;
+  font-size: 14px;
+  color: $light-gray-400;
+}
+
+.product-features-link{
+  font-family: "IRANYEKAN-Regular", serif;
+  font-size: 12px;
+  color: $light-orange;
+  text-decoration: underline;
+  margin-right: 5px;
+}
+
+.product-color{
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50%;
+}
+
+.select-color{
+  margin-top: 20px;
+}
+
+.color-lists{
+  margin-top: 13px;
+}
+
+.color-name{
+  font-family: "IRANYEKAN-Regular", serif;
+  font-size: 12px;
+  color: #949494;
+  margin-top: 4px !important;
+}
+
+.select-color-title{
+  font-family: "IRANYEKAN-Medium", serif;
+  font-size: 14px;
+  color: $light-gray-400;
+}
+
+.select-size{
+  margin-top: 16px;
+}
+
+.colors{
+  cursor: pointer;
+}
+
+.selected{
+  border: 1px solid black;
+}

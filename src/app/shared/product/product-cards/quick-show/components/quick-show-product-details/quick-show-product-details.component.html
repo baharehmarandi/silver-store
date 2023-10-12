@@ -1,0 +1,39 @@
+<div class="product-quick-show-details">
+  <h3 class="product-quick-show-title">{{productQuickShowDetails?.title}}</h3>
+    <div class="category">
+      <span>دسته بندی : </span>
+      <span>{{productQuickShowDetails?.category?.parentCategory?.parentCategory?.name}}</span>
+      <span *ngIf="productQuickShowDetails?.category?.parentCategory?.parentCategory" class="mx-1">/</span>
+      <span>{{productQuickShowDetails?.category?.parentCategory?.name}}</span>
+      <span *ngIf="productQuickShowDetails?.category?.parentCategory" class="mx-1">/</span>
+      <span>{{productQuickShowDetails?.category?.name}}</span>
+    </div>
+    <div class="product-features d-flex flex-column">
+      <div class="d-flex flex-row align-items-center">
+        <span class="product-features-title">ویژگی های محصول</span>
+        <a class="product-features-link">جزئیات محصول</a>
+        <ng-container *ngIf="productQuickShowDetails?.features">
+          <div *ngFor="let productFeatures of productQuickShowDetails?.features">
+            <span>{{productFeatures.name}}</span>
+            <span>{{productFeatures.value}}</span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  <div *ngIf="productQuickShowDetails?.colors" class="select-color">
+    <span class="select-color-title">انتخاب رنگ : </span>
+    <div class="d-flex flex-row color-lists">
+      <div *ngFor="let color of productQuickShowDetails?.colors"
+            class="d-flex flex-column me-3 colors"
+           [id]="color.id"
+            (click)="onSelectColor(color.id)">
+          <div [ngStyle]="{'background-color': color.code}"
+                class="product-color"></div>
+        <span class="color-name">{{color.name}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="select-size">
+    <p-dropdown [options]="productQuickShowDetails?.sizes" [(ngModel)]="selectedSize" placeholder="انتخاب سایز" [editable]="true" optionLabel="name"></p-dropdown>
+  </div>
+</div>

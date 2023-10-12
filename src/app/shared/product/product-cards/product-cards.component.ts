@@ -47,10 +47,10 @@ export class ProductCardsComponent implements OnInit {
       data: {
         id: this.cardProduct?.id
       },
-      width: '700px',
+      width: '1000px',
       style: {
         'max-width': '90%',
-        'min-height' : '500px'
+        'min-height' : '500px',
       }
     });
   }
