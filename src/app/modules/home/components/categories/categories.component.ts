@@ -19,13 +19,13 @@ export class CategoriesComponent {
         slidesPerView: 6.15,
       },
       1200: {
-        slidesPerView: 4,
+        slidesPerView: 5,
       },
       769: {
-        slidesPerView: 2.25,
+        slidesPerView: 5.25,
       },
       467: {
-        slidesPerView: 1.25,
+        slidesPerView: 3.25,
       },
       375: {
         slidesPerView: 1.15,

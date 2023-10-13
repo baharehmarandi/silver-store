@@ -1,4 +1,4 @@
-<div class="container special-offer">
+<div class="container special-offer d-none d-lg-block">
   <span class="special-offer-title text-3xl">فروش ویژه</span>
   <div class="special-offer-box flex flex-row">
     <div class="col-4 flex flex-column relative">
@@ -17,4 +17,9 @@
                                 (onSpecialOfferProductIdSet) = "selectedProductId = $event"></app-special-offer-slider>
     </div>
   </div>
+</div>
+<div class="d-flex d-lg-none container w-100">
+  <app-mobile-special-offer [endTime]=specialOffer?.to
+                            [specialOfferProducts]="specialOffer?.products"
+                            style="width: 100%"></app-mobile-special-offer>
 </div>

@@ -1,0 +1,15 @@
+<div class="special-offer-mobile">
+  <div class="d-flex flex-row align-items-center justify-content-between">
+    <span class="special-offer-title">فروش ویژه</span>
+    <app-countdown [endTime]="endTime"></app-countdown>
+  </div>
+  <div class="special-offer-swiper-container">
+    <swiper-container swiper [config]="config">
+      <ng-container *ngFor="let product of specialOfferProducts">
+        <swiper-slide>
+          <app-product-cards [cardProduct]="product"></app-product-cards>
+        </swiper-slide>
+      </ng-container>
+    </swiper-container>
+  </div>
+</div>

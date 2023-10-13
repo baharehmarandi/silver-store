@@ -20,6 +20,7 @@ import {
   SpecialOfferSliderComponent
 } from './components/special-offer/components/special-offer-slider/special-offer-slider.component';
 import {BannersComponent} from './components/banners/banners.component';
+import { MobileSpecialOfferComponent } from './components/special-offer/mobile-special-offer/mobile-special-offer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {BannersComponent} from './components/banners/banners.component';
     SpecialOfferImagesComponent,
     SpecialOfferSliderComponent,
     BannersComponent,
+    MobileSpecialOfferComponent,
   ],
   imports: [
     CommonModule,

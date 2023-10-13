@@ -1,5 +1,10 @@
 <header class="header">
   <app-silver-price></app-silver-price>
-  <app-search></app-search>
-  <app-navbar></app-navbar>
+  <div class="d-md-flex flex-md-column d-none">
+    <app-search></app-search>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="d-flex d-md-none">
+    <app-mobile-header style="width: 100%"></app-mobile-header>
+  </div>
 </header>

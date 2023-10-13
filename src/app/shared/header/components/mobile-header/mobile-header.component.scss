@@ -1,0 +1,47 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.mobile-header{
+  border-bottom: 3px solid #dedede;
+  margin-bottom: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.mobile-header>button{
+  border: unset;
+  background-color: unset;
+  font-family: "IRANYEKAN-Medium", serif;
+  font-size: 16px;
+  color: #6b6b6b;
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.mobile-header>button>span{
+  margin-right: 10px;
+}
+
+.favorite-icon-btn, .profile-icon-btn, .shopping-card-icon-btn{
+  border: none;
+  background-color: unset;
+}
+
+.category{
+  font-family: "IRANYEKAN-Medium", serif;
+  font-size: 16px;
+  color: #6b6b6b;
+  margin-bottom: 24px;
+}
+
+.category>span{
+  margin-right: 10px;
+}
+
+.subCategories>a{
+  font-family: IRANYEKAN-Medium, serif;
+  font-size: 14px;
+  color: #6b6b6b;
+  margin-right: 15px;
+  margin-top: 20px;
+  text-decoration: none;
+}

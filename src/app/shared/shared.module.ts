@@ -18,9 +18,14 @@ import {LoadingComponent} from './loading/loading.component';
 import {
   QuickShowSliderComponent
 } from './product/product-cards/quick-show/components/quick-show-slider/quick-show-slider.component';
-import { QuickShowProductDetailsComponent } from './product/product-cards/quick-show/components/quick-show-product-details/quick-show-product-details.component';
-import { QuickShowProductImageComponent } from './product/product-cards/quick-show/components/quick-show-product-image/quick-show-product-image.component';
-import { AddToCardComponent } from './product/product-cards/quick-show/components/add-to-card/add-to-card.component';
+import {
+  QuickShowProductDetailsComponent
+} from './product/product-cards/quick-show/components/quick-show-product-details/quick-show-product-details.component';
+import {
+  QuickShowProductImageComponent
+} from './product/product-cards/quick-show/components/quick-show-product-image/quick-show-product-image.component';
+import {AddToCardComponent} from './product/product-cards/quick-show/components/add-to-card/add-to-card.component';
+import {MobileHeaderComponent} from './header/components/mobile-header/mobile-header.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,8 @@ import { AddToCardComponent } from './product/product-cards/quick-show/component
     QuickShowSliderComponent,
     QuickShowProductDetailsComponent,
     QuickShowProductImageComponent,
-    AddToCardComponent
+    AddToCardComponent,
+    MobileHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +57,8 @@ import { AddToCardComponent } from './product/product-cards/quick-show/component
         HeaderComponent,
         SilverPriceComponent,
         CountdownComponent,
-        ProductSliderComponent
+        ProductSliderComponent,
+        ProductCardsComponent
     ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

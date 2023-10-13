@@ -1,0 +1,72 @@
+<div class="d-flex flex-row justify-content-between">
+  <div>
+    <p-sidebar [(visible)]="sidebarVisible" position="right">
+      <p-image [src]="logoImage" alt="logo image" width="42" class="d-flex justify-content-center"></p-image>
+      <div class="d-flex flex-column mobile-header">
+        <button>
+          <img src="assets/images/ProfilePrimary.svg" alt="profile">
+          <span>پروفایل</span>
+        </button>
+        <button>
+          <img src="assets/images/Info%20Circle.svg" alt="about us">
+          <span>درباره ما</span>
+        </button>
+        <button>
+          <img src="assets/images/Iconly-Light-Calling.svg" alt="contact to us">
+          <span>تماس با ما</span>
+        </button>
+        <button>
+          <img src="assets/images/feather.svg" alt="policy">
+          <span>قوانین و مقررات</span>
+        </button>
+        <button>
+          <img src="assets/images/Info%20Circle%202.svg" alt="faq">
+          <span>سوالات متداول</span>
+        </button>
+        <button>
+          <img src="assets/images/message-circle.svg" alt="message">
+          <span>انتقادات و پیشنهادات</span>
+        </button>
+        <button>
+          <img src="assets/images/settings.svg" alt="production request">
+          <span>درخواست تولید</span>
+        </button>
+        <button>
+          <img src="assets/images/book.svg" alt="purchase guide">
+          <span>راهنمای خرید عمده</span>
+        </button>
+        <button>
+          <img src="assets/images/pardakht.svg" alt="purchase">
+          <span>پرداخت</span>
+        </button>
+        <button>
+          <img src="assets/images/book%20(1).svg" alt="pwa">
+          <span>راهنمای نصب اپلیکیشن PWA</span>
+        </button>
+      </div>
+      <div class="d-flex flex-column justify-content-center mobile-header-category">
+        <div class="d-flex align-items-center category">
+          <img src="assets/images/Iconly-Light-Category.svg" alt="category">
+          <span>دسته بندی</span>
+        </div>
+        <ng-container *ngIf="(categoryList$|async) as categoryList">
+          <p-accordion [activeIndex]="activeIndex">
+            <ng-container *ngFor="let categories of categoryList">
+              <p-accordionTab [header]="categories.name">
+                <div class="subCategories d-flex flex-column">
+                  <ng-container *ngFor="let subCategory of categories.subCategories">
+                    <a>{{subCategory.name}}</a>
+                  </ng-container>
+                </div>
+              </p-accordionTab>
+            </ng-container>
+          </p-accordion>
+        </ng-container>
+      </div>
+    </p-sidebar>
+    <span (click)="sidebarVisible = true" class="pi pi-bars " style="font-size: 2rem; margin-top: 12px; margin-right: 12px;"></span>
+  </div>
+  <div class="search p-input-icon-left ms-5">
+    <i class="pi pi-search search-icon"></i>
+  </div>
+</div>

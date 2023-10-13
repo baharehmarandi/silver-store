@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {INewProducts} from "../../../models/main-page/new-products.interface";
 import {SwiperOptions} from "swiper/types";
 import {DialogService, DynamicDialogRef} from "primeng/dynamicdialog";
 import {QuickShowComponent} from "./quick-show/quick-show.component";
+import {IProducts} from "../../../models/main-page/products.interface";
 
 @Component({
   selector: 'app-product-cards',
@@ -11,7 +11,8 @@ import {QuickShowComponent} from "./quick-show/quick-show.component";
 })
 export class ProductCardsComponent implements OnInit {
 
-  @Input() cardProduct?: INewProducts;
+  @Input() cardProduct?: IProducts;
+
   discount?: number
   showQuickMode: boolean = false;
   ref: DynamicDialogRef | undefined;
@@ -23,7 +24,8 @@ export class ProductCardsComponent implements OnInit {
     },
     autoHeight: true,
     spaceBetween: 5,
-    slidesPerView: 1
+    slidesPerView: 1,
+    simulateTouch: false,
   }
 
   constructor(public dialogService: DialogService) {

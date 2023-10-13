@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, Input, Renderer2} from '@angular/core';
+import {AfterViewInit, Component, Input, OnDestroy, Renderer2} from '@angular/core';
 import {ICategory} from "../../../../models/category.interface";
 import {Store} from "@ngrx/store";
-import {CategoryAction} from "../../../../store/category/actions/category.action";
 import {selectCategory} from "../../../../store/category/selectores/category.selector";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-category-lists',
@@ -10,29 +10,39 @@ import {selectCategory} from "../../../../store/category/selectores/category.sel
   styleUrls: ['./category-lists.component.scss']
 })
 
-export class CategoryListsComponent implements AfterViewInit {
+export class CategoryListsComponent implements AfterViewInit, OnDestroy {
 
   @Input() showCategories: boolean = false;
+  @Input() showCategoryFirstImage?: boolean;
 
   categoryList: ICategory[] | undefined;
+
   subCategoryIndex?: number;
   showSubCategory: boolean = false;
   isHover: boolean[] = [];
   imageUrl?: string = "";
 
+  private subscriptions = new Subscription();
   constructor(private store: Store,
               private renderer: Renderer2) {
-    this.store.dispatch(CategoryAction.loadCategory());
-    this.store.select(selectCategory).subscribe((categories: ICategory[] | undefined) => {
-      this.categoryList = categories;
-    });
+
+    this.subscriptions.add(
+      this.store.select(selectCategory).subscribe((categories: ICategory[] | undefined) => {
+        this.categoryList = categories;
+        this.imageUrl = categories![0].image
+      })
+    )
   }
 
   ngAfterViewInit() {
     this.onShowSubCategory(0);
   }
 
+
   onShowSubCategory(index: number){
+
+    this.showCategoryFirstImage = false;
+    console.log(this.showCategoryFirstImage)
 
     this.showSubCategory = true;
     this.categoryList?.forEach((item, i) => {
@@ -58,6 +68,10 @@ export class CategoryListsComponent implements AfterViewInit {
     }
 
     this.imageUrl = this.categoryList![index].image;
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.unsubscribe();
   }
 
 }

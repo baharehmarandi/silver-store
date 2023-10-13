@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {Store} from "@ngrx/store";
+import {CategoryAction} from "../../store/category/actions/category.action";
+import {ICategory} from "../../models/category.interface";
 
 @Component({
   selector: 'app-header',
@@ -7,7 +10,11 @@ import {Component} from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor() {
+  categoryList: ICategory[] | undefined;
+  firstImageUrl?: string;
 
+  constructor(private store: Store) {
+    this.store.dispatch(CategoryAction.loadCategory());
   }
+
 }

@@ -1,14 +1,7 @@
-import {IProductSilverPrice} from "./product-silver-price.interface";
+import {IProducts} from "./products.interface";
 
 export interface IMainPageCategoryProducts {
   id: number,
-  title?: string,
-  description?: string,
-  images?: string[],
-  defaultWeight?: number,
-  fee?: number,
-  discount?: number,
-  status?: string,
-  bookmark?: boolean,
-  silverPrice: IProductSilverPrice
+  name?: string,
+  products?: IProducts[]
 }

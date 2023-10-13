@@ -2,14 +2,37 @@
   <app-slider [sliders]="mainPage.sliders"></app-slider>
   <app-categories [categories]="mainPage.categories"></app-categories>
   <app-special-offer></app-special-offer>
-  <div class="container d-flex flex-row">
-    <div class="col-6">
+  <div class="container d-flex flex-column md:flex-row flex-wrap">
+    <div class="col-12 md:col-6">
       <app-banners [banners]="mainPage.banners![0]"></app-banners>
     </div>
-    <div class="col-6">
+    <div class="col-12 md:col-6">
       <app-banners [banners]="mainPage.banners![1]"></app-banners>
     </div>
   </div>
   <app-product-slider title="جدیدترین ها" [products]="mainPage.newProducts"></app-product-slider>
+  <div class="container d-flex flex-column md:flex-row flex-wrap">
+    <div class="col-12 md:col-6">
+      <app-banners [banners]="mainPage.banners![2]"></app-banners>
+    </div>
+    <div class="col-12 md:col-6">
+      <app-banners [banners]="mainPage.banners![3]"></app-banners>
+    </div>
+  </div>
+  <app-product-slider title="پر فروش ترین ها" [products]="mainPage.bestsellerProducts"></app-product-slider>
+  <div class="container d-flex flex-column md:flex-row flex-wrap">
+    <div class="col-12 md:col-6">
+      <app-banners [banners]="mainPage.banners![4]"></app-banners>
+    </div>
+    <div class="col-12 md:col-6">
+      <app-banners [banners]="mainPage.banners![5]"></app-banners>
+    </div>
+  </div>
+  <app-product-slider
+    *ngIf="!mainPage.discountProducts"
+    title="تخفیف دار ها" [products]="mainPage.discountProducts"></app-product-slider>
+  <ng-container *ngFor="let mainPageCategoryProduct of mainPage.mainPageCategoryProducts">
+    <app-product-slider [title]="mainPageCategoryProduct.name" [products]="mainPageCategoryProduct.products"></app-product-slider>
+  </ng-container>
 </ng-container>
 

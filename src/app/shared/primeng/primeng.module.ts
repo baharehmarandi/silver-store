@@ -6,6 +6,9 @@ import {CarouselModule} from 'primeng/carousel';
 import {DynamicDialogModule} from 'primeng/dynamicdialog'
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {DropdownModule} from 'primeng/dropdown';
+import {SidebarModule} from 'primeng/sidebar';
+import {ButtonModule} from 'primeng/button';
+import {AccordionModule} from 'primeng/accordion';
 
 const importedModules = [
   ImageModule,
@@ -13,7 +16,10 @@ const importedModules = [
   CarouselModule,
   DynamicDialogModule,
   ProgressSpinnerModule,
-  DropdownModule
+  DropdownModule,
+  SidebarModule,
+  ButtonModule,
+  AccordionModule
 ]
 
 @NgModule({

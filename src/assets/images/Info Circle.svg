@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.2" height="20.2" viewBox="0 0 20.2 20.2">
+  <g id="Info_Circle" data-name="Info Circle" transform="translate(0.1 0.1)">
+    <path id="Info_Circle-2" data-name="Info Circle" d="M0,10A10,10,0,1,1,10,20,10.011,10.011,0,0,1,0,10Zm1.5,0A8.5,8.5,0,1,0,10,1.5,8.51,8.51,0,0,0,1.5,10Zm7.745,3.8a.751.751,0,0,1,.649-.743l.112-.007a.751.751,0,0,1,.1,1.494L10,14.546A.75.75,0,0,1,9.245,13.8Zm.007-3.071-.007-.1V6.2a.75.75,0,0,1,1.493-.1l.007.1v4.419a.75.75,0,0,1-1.493.1Z" transform="translate(0 0)" fill="#cc9866" stroke="#d9aa7d" stroke-width="0.2"/>
+  </g>
+</svg>

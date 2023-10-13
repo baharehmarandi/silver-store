@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Observable, tap} from "rxjs";
+import {Observable} from "rxjs";
 import {IProducts} from "../../../../models/main-page/products.interface";
 import {Store} from "@ngrx/store";
 import {QuickShowActions} from "../../../../store/quick-show/actions/quick-show.action";
@@ -28,9 +28,6 @@ export class QuickShowComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(QuickShowActions.loadQuickShow({id: this.dynamicDialogConfig.data?.id}));
 
-    this.quickShow$.pipe(
-      tap((item) => console.log("item", item))
-    )
   }
 
 }
