@@ -21,6 +21,9 @@ import {
 } from './components/special-offer/components/special-offer-slider/special-offer-slider.component';
 import {BannersComponent} from './components/banners/banners.component';
 import { MobileSpecialOfferComponent } from './components/special-offer/mobile-special-offer/mobile-special-offer.component';
+import { DownloadApplicationComponent } from './components/download-application/download-application.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { PostsCardComponent } from './components/blog/components/posts-card/posts-card.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { MobileSpecialOfferComponent } from './components/special-offer/mobile-s
     SpecialOfferSliderComponent,
     BannersComponent,
     MobileSpecialOfferComponent,
+    DownloadApplicationComponent,
+    BlogComponent,
+    PostsCardComponent,
   ],
   imports: [
     CommonModule,

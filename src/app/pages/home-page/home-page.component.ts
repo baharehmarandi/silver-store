@@ -4,6 +4,7 @@ import {MainPageAction} from "../../store/main-page/actions/main-page.action";
 import {Observable} from "rxjs";
 import {selectMainPage} from "../../store/main-page/selectors/main-page.selector";
 import {IMainPage} from "../../models/main-page/mainPage.interface";
+import {BlogAction} from "../../store/blog/actions/blog.action";
 
 @Component({
   selector: 'app-home-page',
@@ -16,7 +17,8 @@ export class HomePageComponent {
 
   constructor(private store: Store) {
     this.store.dispatch(MainPageAction.loadMainPage());
-    this.mainPage$ = this.store.select(selectMainPage)
+    this.mainPage$ = this.store.select(selectMainPage);
+    this.store.dispatch(BlogAction.loadBlog());
   }
 
 }

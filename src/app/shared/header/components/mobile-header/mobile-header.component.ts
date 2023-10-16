@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";
 import {ICategory} from "../../../../models/category.interface";
-import {selectCategory} from "../../../../store/category/selectores/category.selector";
+import {selectCategory} from "../../../../store/category/selectors/category.selector";
 
 @Component({
   selector: 'app-mobile-header',

@@ -7,6 +7,7 @@ import {IPriceSilverResponse} from "../../models/silver-price.interface";
 import {ICategory} from "../../models/category.interface";
 import {IApiResponseList} from "../../models/apiResponseList.interface";
 import {IMainPage} from "../../models/main-page/mainPage.interface";
+import {IBlog} from "../../models/main-page/blog.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,9 @@ export class HomeService {
 
   getMainPage(): Observable<IApiResponse<IMainPage>> {
     return this.http.get<IApiResponse<IMainPage>>(`${apiBaseUrl}/mainPage`)
+  }
+
+  getBlogPosts(): Observable<IBlog[]> {
+    return this.http.get<IBlog[]>("https://blog.gtasilver.com/wp-json/wp/v2/posts?_embed=1")
   }
 }

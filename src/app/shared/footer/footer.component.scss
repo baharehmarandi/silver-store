@@ -1,0 +1,87 @@
+@import "../../../assets/styles/colors.scss";
+
+.benefits{
+  margin-top: 64px !important;
+  margin-bottom: 32px !important;
+}
+
+.footer{
+  background-color: $bg-light-10;
+  width: 100% !important;
+  //height: 400px;
+  height: 100%;
+  padding-top: 25px;
+  padding-right: 139px !important;
+  padding-left: 139px !important;
+}
+
+.about-us-paragraph, .phone-number{
+  font-family: "IRANYEKAN-Medium", serif;
+  font-size: 14px;
+  color: $light-gray-400;
+}
+
+.quick-access, .purchase-guide{
+  font-family: "IRANYEKAN-Medium", serif;
+  font-size: 18px;
+  color: $light-gray-400;
+  margin-bottom: 11px;
+}
+
+.about-us>a,
+.contact-us>a,
+.faq>a,
+.term-policy>a,
+.payment>a,
+.major-buying-guide>a,
+.critics-suggestions>a,
+.blog>a{
+  font-family: "IRANYEKAN-Medium", serif;
+  font-size: 14px;
+  color: $light-gray-400;
+  text-decoration: unset;
+}
+
+.about-us::marker,
+.contact-us::marker,
+.faq::marker,
+.term-policy::marker,
+.payment::marker,
+.major-buying-guide::marker,
+.critics-suggestions::marker,
+.blog::marker{
+  content: ''
+}
+
+.quick-access-list,
+.purchase-guide-list{
+  padding-right: 0;
+}
+
+.quick-access-box{
+  margin-right: 42px;
+  margin-left: 76px;
+}
+
+.copyright{
+  margin-right: 42px;
+  border-top: 1px solid #707070;
+  padding-top: 25px;
+}
+
+@media (max-width: 991px) {
+  .quick-access-box{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .copyright{
+     margin-right: 0;
+    border-top: 1px solid #707070;
+    padding-top: 0;
+  }
+
+  .footer{
+    padding-right: 20px!important;
+    padding-left: 20px!important;
+  }
+}

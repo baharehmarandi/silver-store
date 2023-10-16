@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, Input, OnDestroy, Renderer2} from '@angular/core';
 import {ICategory} from "../../../../models/category.interface";
 import {Store} from "@ngrx/store";
-import {selectCategory} from "../../../../store/category/selectores/category.selector";
+import {selectCategory} from "../../../../store/category/selectors/category.selector";
 import {Subscription} from "rxjs";
 
 @Component({
@@ -42,7 +42,6 @@ export class CategoryListsComponent implements AfterViewInit, OnDestroy {
   onShowSubCategory(index: number){
 
     this.showCategoryFirstImage = false;
-    console.log(this.showCategoryFirstImage)
 
     this.showSubCategory = true;
     this.categoryList?.forEach((item, i) => {

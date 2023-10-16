@@ -21,6 +21,8 @@ import {register} from 'swiper/element/bundle';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {quickShowReducer} from "./store/quick-show/reducers/quik-show.reducer";
 import {QuickShowEffects} from "./store/quick-show/effects/quick-show.effect";
+import {BlogReducer} from "./store/blog/reducers/blog.reducer";
+import {BlogEffect} from "./store/blog/effects/blog.effect";
 
 register();
 
@@ -34,8 +36,8 @@ register();
     CommonModule,
     HttpClientModule,
     PrimengModule,
-    StoreModule.forRoot({silverPrice: SilverPriceReducer, Category: CategoryReducer, MainPage: MainPageReducer, quickShow: quickShowReducer}),
-    EffectsModule.forRoot([SilverPriceEffect, CategoryEffect, MainPageEffect, QuickShowEffects]),
+    StoreModule.forRoot({silverPrice: SilverPriceReducer, Category: CategoryReducer, MainPage: MainPageReducer, quickShow: quickShowReducer, Blog: BlogReducer}),
+    EffectsModule.forRoot([SilverPriceEffect, CategoryEffect, MainPageEffect, QuickShowEffects, BlogEffect]),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: !isDevMode()}),
     SharedModule,
     SwiperDirective,

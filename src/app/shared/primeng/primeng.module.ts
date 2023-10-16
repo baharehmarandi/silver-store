@@ -9,6 +9,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import {SidebarModule} from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
 import {AccordionModule} from 'primeng/accordion';
+import {CardModule} from 'primeng/card';
 
 const importedModules = [
   ImageModule,
@@ -19,7 +20,8 @@ const importedModules = [
   DropdownModule,
   SidebarModule,
   ButtonModule,
-  AccordionModule
+  AccordionModule,
+  CardModule
 ]
 
 @NgModule({
