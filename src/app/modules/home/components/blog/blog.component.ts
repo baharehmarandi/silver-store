@@ -20,7 +20,7 @@ export class BlogComponent {
   public config: SwiperOptions = {
 
     autoHeight: true,
-    spaceBetween: 10,
+    spaceBetween: 20,
     slidesPerView: 4,
     breakpoints: {
       1229: {

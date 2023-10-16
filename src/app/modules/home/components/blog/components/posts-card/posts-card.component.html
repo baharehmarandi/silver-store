@@ -1,13 +1,14 @@
-<p-card [header]="post?.title?.rendered" [style]="{ width: '360px' }">
-  <ng-template pTemplate="header">
-    <img alt="Card" [src]="post?._embedded['wp:featuremedia'][0]!.link" />
-  </ng-template>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-    quas!
-  </p>
-  <ng-template pTemplate="footer">
-    <p-button label="Save" icon="pi pi-check"></p-button>
-    <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-  </ng-template>
-</p-card>
+<div class="blog-post">
+  <img alt="Card" [src]="post?._embedded['wp:featuredmedia'][0]!.link" class="posts-image"/>
+  <div class="flex flex-column post-details">
+    <span class="post-title">{{post?.title?.rendered}}</span>
+    <span class="post-date">{{post?.date | convertToPersianDate }}</span>
+    <p [innerHTML]="post?.content?.rendered! | safeHtml" class="post-content"></p>
+    <a class="icon-link" [routerLink]="post?.link">
+      بیشتر بخوانید
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left ms-2" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+    </a>
+  </div>
+</div>

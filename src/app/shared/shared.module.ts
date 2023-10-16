@@ -27,6 +27,8 @@ import {
 import {AddToCardComponent} from './product/product-cards/quick-show/components/add-to-card/add-to-card.component';
 import {MobileHeaderComponent} from './header/components/mobile-header/mobile-header.component';
 import {FooterComponent} from './footer/footer.component';
+import {ConvertToPersianDatePipe} from './convert-to-persian-date/convert-to-persian-date.pipe';
+import {SafeHtmlPipe} from './safe-html/safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import {FooterComponent} from './footer/footer.component';
     QuickShowProductImageComponent,
     AddToCardComponent,
     MobileHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ConvertToPersianDatePipe,
+    SafeHtmlPipe
   ],
   imports: [
     CommonModule,
@@ -55,14 +59,16 @@ import {FooterComponent} from './footer/footer.component';
     SwiperDirective,
     DialogModule
   ],
-    exports: [
-        HeaderComponent,
-        SilverPriceComponent,
-        CountdownComponent,
-        ProductSliderComponent,
-        ProductCardsComponent,
-        FooterComponent
-    ],
+  exports: [
+    HeaderComponent,
+    SilverPriceComponent,
+    CountdownComponent,
+    ProductSliderComponent,
+    ProductCardsComponent,
+    FooterComponent,
+    ConvertToPersianDatePipe,
+    SafeHtmlPipe
+  ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],

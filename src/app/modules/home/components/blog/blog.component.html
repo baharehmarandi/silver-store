@@ -1,9 +1,12 @@
-<ng-container *ngIf="posts$ | async as posts">
-  <swiper-container swiper [config]="config">
-    <ng-container *ngFor="let post of posts">
-      <swiper-slide>
-        <app-posts-card [post] = "post"></app-posts-card>
-      </swiper-slide>
+<div class="container" style="margin-top: 40px;">
+  <h3 class="blog-title">وبلاگ</h3>
+    <ng-container *ngIf="posts$ | async as posts">
+      <swiper-container swiper [config]="config" class="blog-post-slider">
+        <ng-container *ngFor="let post of posts">
+          <swiper-slide>
+            <app-posts-card [post] = "post"></app-posts-card>
+          </swiper-slide>
+        </ng-container>
+      </swiper-container>
     </ng-container>
-  </swiper-container>
-</ng-container>
+</div>
