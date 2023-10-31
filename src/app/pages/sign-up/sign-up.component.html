@@ -1,0 +1,11 @@
+<div style="height: 100%; width: 100%; margin-top: 60px" class="d-flex justify-content-center align-items-center">
+  <div class="sign-up-box d-flex flex-column">
+    <img src="assets/images/logo%20(1).png" alt="logo" width="42" height="42" class="d-flex align-self-center">
+    <p-toast></p-toast>
+    <p-steps [model]="items" [readonly]="true" dir="ltr" [(activeIndex)]="activeIndex"
+             (activeIndexChange)="onActiveIndexChange($event)"></p-steps>
+    <app-register *ngIf="activeIndex === 0"
+                  (activeIndex)="activeIndex=$event"></app-register>
+    <app-number-confirmation *ngIf="activeIndex === 1"></app-number-confirmation>
+  </div>
+</div>

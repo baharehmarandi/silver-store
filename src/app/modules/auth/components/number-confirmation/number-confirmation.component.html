@@ -1,0 +1,12 @@
+<div class="number-confirmation d-flex flex-column align-items-center">
+  <h3>تایید شماره</h3>
+  <p>لطفا کد 6 رقمی ارسال شده به شماره زیر را وارد نمایید</p>
+  <form [formGroup]="codeInputForm!" class="d-flex flex-row codes" dir="ltr">
+    <input pInputText formControlName="inputCode1" placeholder="" class="" autocomplete="off"/>
+    <input pInputText formControlName="inputCode2" placeholder="" class="" autocomplete="off"/>
+    <input pInputText formControlName="inputCode3" placeholder="" class="" autocomplete="off"/>
+    <input pInputText formControlName="inputCode4" placeholder="" class="" autocomplete="off"/>
+    <input pInputText formControlName="inputCode5" placeholder="" class="" autocomplete="off"/>
+    <input pInputText formControlName="inputCode6" placeholder="" class="" autocomplete="off"/>
+  </form>
+</div>

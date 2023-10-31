@@ -1,0 +1,55 @@
+<div class="d-flex flex-column align-items-center register">
+  <h3 class="register-title">ثبت نام</h3>
+  <p class="register-description text-center">برای ورود به پنل کاربری خود ابتدا باید از این قسمت ثبت نام خود را تکمیل کنید سپس توسط نام
+    کاربری و رمز عبور وارد سیستم شوید.
+  </p>
+ <form [formGroup]="registerForm!" (ngSubmit)="onSubmit(registerForm)" class="w-full flex flex-column align-items-center">
+   <div class="flex flex-column gap-2 phoneNumber-form">
+     <label htmlFor="phoneNumber">شماره همراه</label>
+     <span class="p-input-icon-right">
+        <i class="pi">
+          <img src="assets/images/mobile.png" alt="mobile">
+        </i>
+        <input pInputText id="phoneNumber" aria-describedby="phoneNumber-help" placeholder="لطفا شماره همراه خود را وارد نمایید"
+               formControlName="phoneNumber" class="phone-number"/>
+     </span>
+     <span class="invalid-error"
+       *ngIf="registerForm?.get!('phoneNumber')?.invalid && (registerForm?.get!('phoneNumber')?.dirty || registerForm?.get!('phoneNumber')?.touched)">شماره موبایل نامعتبر است.</span>
+   </div>
+   <div class="flex flex-column gap-2 password-form">
+     <label htmlFor="password">رمز عبور</label>
+     <span class="p-input-icon-right relative">
+        <i class="pi">
+          <img src="assets/images/Iconly-Light-Lock.png" alt="mobile">
+        </i>
+        <input pInputText id="password" aria-describedby="password-help" [type]="passwordShowType" placeholder="لطفا رمز عبور خود را وارد نمایید"
+               formControlName="password" class="password" autocomplete="off"/>
+       <img src="assets/images/Iconly-Light-Show.png" alt="show password" class="absolute show-password"
+            (click)="onShowPassword()">
+     </span>
+     <span class="invalid-error"
+       *ngIf="registerForm?.get!('password')?.invalid && (registerForm?.get!('password')?.dirty || registerForm?.get!('password')?.touched)">رمز عبور باید بیشتر از 8 کاراکتر باشد</span>
+   </div>
+   <div class="flex flex-column gap-2 password-repeat-form">
+     <label htmlFor="passwordRepeat">تکرار رمز عبور</label>
+     <span class="p-input-icon-right relative">
+        <i class="pi">
+          <img src="assets/images/Iconly-Light-Lock.png" alt="mobile">
+        </i>
+        <input pInputText id="passwordRepeat" aria-describedby="passwordRepeat-help" [type]="passwordRepeatShowType" placeholder="لطفا رمز عبور خود را تکرار نمایید"
+               formControlName="passwordRepeat" class="password-repeat" autocomplete="off"/>
+       <img src="assets/images/Iconly-Light-Show.png" alt="show password" class="absolute show-password"
+            (click)="onShowPasswordRepeat()">
+     </span>
+     <span class="invalid-error"
+       *ngIf="registerForm?.hasError('mustMatch')">
+       رمز عبور و تکرار رمز عبور مطابق نیستند
+     </span>
+   </div>
+   <button type="submit" class="submit-register-btn" [disabled]="registerForm?.invalid" (click)="onSubmitRegister()">ثبت نام</button>
+ </form>
+  <div class="flex flex-row">
+    <span class="login">آیا قبلا ثبت نام کرده اید؟</span>
+    <a class="login-link ms-2">ورود</a>
+  </div>
+</div>

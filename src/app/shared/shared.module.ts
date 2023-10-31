@@ -29,6 +29,7 @@ import {MobileHeaderComponent} from './header/components/mobile-header/mobile-he
 import {FooterComponent} from './footer/footer.component';
 import {ConvertToPersianDatePipe} from './convert-to-persian-date/convert-to-persian-date.pipe';
 import {SafeHtmlPipe} from './safe-html/safe-html.pipe';
+import {RouterLink} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -51,14 +52,15 @@ import {SafeHtmlPipe} from './safe-html/safe-html.pipe';
     ConvertToPersianDatePipe,
     SafeHtmlPipe
   ],
-  imports: [
-    CommonModule,
-    PrimengModule,
-    FormsModule,
-    NgOptimizedImage,
-    SwiperDirective,
-    DialogModule
-  ],
+    imports: [
+        CommonModule,
+        PrimengModule,
+        FormsModule,
+        NgOptimizedImage,
+        SwiperDirective,
+        DialogModule,
+        RouterLink
+    ],
   exports: [
     HeaderComponent,
     SilverPriceComponent,
