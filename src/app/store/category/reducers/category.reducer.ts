@@ -1,6 +1,6 @@
 import {ICategory} from "../../../models/category.interface";
 import {createReducer, on} from "@ngrx/store";
-import {CategoryAction} from "../actions/category.action";
+import {LoadCategoryAction, LoadCategoryFailureAction, LoadCategorySuccessAction,} from "../actions/category.action";
 import {HttpErrorResponse} from "@angular/common/http";
 
 export interface CategoryState {
@@ -19,18 +19,18 @@ export const initialState: CategoryState = {
 
 export const CategoryReducer = createReducer(
   initialState,
-  on(CategoryAction.loadCategory, (state) => ({
+  on(LoadCategoryAction, (state) => ({
     ...state,
     loading: true,
     success: undefined
   })),
-  on(CategoryAction.loadCategorySuccess, (state, action) => ({
+  on(LoadCategorySuccessAction, (state, action) => ({
     ...state,
     loading: false,
     success: true,
     category: action.payload
   })),
-  on(CategoryAction.loadCategoryFailure, (state, action) => ({
+  on(LoadCategoryFailureAction, (state, action) => ({
     ...state,
     loading: false,
     success: false,

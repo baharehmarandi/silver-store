@@ -20,10 +20,14 @@ import {
   SpecialOfferSliderComponent
 } from './components/special-offer/components/special-offer-slider/special-offer-slider.component';
 import {BannersComponent} from './components/banners/banners.component';
-import { MobileSpecialOfferComponent } from './components/special-offer/mobile-special-offer/mobile-special-offer.component';
-import { DownloadApplicationComponent } from './components/download-application/download-application.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { PostsCardComponent } from './components/blog/components/posts-card/posts-card.component';
+import {
+  MobileSpecialOfferComponent
+} from './components/special-offer/mobile-special-offer/mobile-special-offer.component';
+import {DownloadApplicationComponent} from './components/download-application/download-application.component';
+import {BlogComponent} from './components/blog/blog.component';
+import {PostsCardComponent} from './components/blog/components/posts-card/posts-card.component';
+import {StoreModule} from "@ngrx/store";
+import {profileReducer} from "../../store/application-state/reducers/app-state.reducer";
 
 @NgModule({
   declarations: [
@@ -46,7 +50,8 @@ import { PostsCardComponent } from './components/blog/components/posts-card/post
     SharedModule,
     PrimengModule,
     SwiperDirective,
-    CountdownModule
+    CountdownModule,
+    StoreModule.forFeature( "profile",profileReducer)
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
